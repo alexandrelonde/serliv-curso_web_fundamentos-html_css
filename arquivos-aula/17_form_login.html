@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alexandre">
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+    .formLogin {
+      width: 250px;
+      margin: 50px auto 0;
+    }
+
+    .formLogin fieldset {
+      background-color: #ccc;
+    }
+
+    #user, #pass, .btn {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    /* Pseudo classe para colocar cor no focus no input */
+    #user:focus, #pass:focus {
+      background-color: aqua;
+    }
+
+    .btn {
+      margin-top: 15px;
+      background-color: blueviolet;
+      text-transform: uppercase;
+    }
+
+    #user {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+
+  </style>
+ 
+</head>
+<body>
+
+  <h1>Formulário de Login</h1>
+
+  <form action="#" method="post" class="formLogin">
+
+    <fieldset>
+      <legend>Login</legend>
+      <label for="user">Digite seu usuário</label>
+      <input type="text" id="user" name="user_backend" autofocus>
+      <!-- autofocus -> atributo para receber o cursor assim que abrir a página-->
+      <label>Digite a senha</label>
+      <input type="password" id="pass" name="pass_backend" >
+      <input type="submit" value="Logar" class="btn">
+    </fieldset>
+
+    
+
+  </form>
+
+</body>
+</html>
+
+<!--
+  Cuidado ao montar um formulário
+  - form (action, method)
+  - fieldset
+  - legend
+-->
+
+<!--
+  o campo "name" no inputs tem de ser alinhado com o pessoal do backend,
+  pois tem que ter o mesmo nome.
+-->

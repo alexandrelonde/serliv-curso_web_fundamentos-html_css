@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title> Trabalhando com Display </title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre">
+  <meta name="description" content="Trabalhando com Imagens">
+  <meta name="keywords" content="html5, tecnologia">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    div {
+      background-color: blue;
+      width: 150px;
+      height: 100px;
+      margin: 10px;
+    }
+
+    #div1 {
+      padding: 25px;
+    }
+
+    #div2 {
+      padding: 25px;
+      box-sizing: border-box;
+      /*
+        O padrão que é colocado é o content-box, com ele
+        o elemento será expandido com o padding 
+      */
+    }
+    
+  </style>
+</head>
+
+<body>
+  <h1> Trabalhando com box-sizing: border-box </h1>
+  <div id="div1">
+    SEM box-sizing
+  </div>
+
+  <div id="div2">
+    COM box-sizin
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title> Trabalhando com tabelas </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    /* Características aplicadas a toda tabela */
+    table {
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    caption {
+      font-weight: bold;
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+    th {
+      background-color: #0000ff;
+      border: 2px solid black;
+    }
+
+    td {
+      border: 1px solid black;
+      background-color: aqua;
+    }
+  </style>
+  
+</head>
+<body>
+  <table>
+    <caption>Tabela de preços de cursos</caption>
+
+    <!-- Head da tabela -->
+    <thead>
+      <tr>
+        <th>Área</th>
+        <th>Curso</th>
+        <th>Investimento</th>
+      </tr>
+    </thead>
+
+    <!-- Foot da tabela -->
+    <tfoot>
+      <tr>
+        <td colspan="3">Valores podem sofrer alteração sem prévio aviso.</td>
+      </tr>
+    </tfoot>
+    
+    <!-- Body da tabela -->
+    <tbody>
+      <tr>
+        <td rowspan="3">Design</td>
+        <td>InDesign</td>
+        <td>R$ 1.000,00</td>
+      </tr>
+
+      <tr>
+        <td>Photoshop</td>
+        <td>R$ 1.000,00</td>
+      </tr>
+
+      <tr>
+        <td>Illustrator</td>
+        <td>R$ 1.000,00</td>
+      </tr>
+
+      <tr>
+        <td rowspan="4">Development</td>
+        <td>HTML</td>
+        <td>R$ 1.000,00</td>
+      </tr>
+
+      <tr>
+        <td>CSS</td>
+        <td>R$ 1.000,00</td>
+      </tr>
+
+      <tr>
+        <td>Javascript</td>
+        <td>R$ 1.000,00</td>
+      </tr>
+
+      <tr>
+        <td>PHP</td>
+        <td>R$ 1.000,00</td>
+      </tr>
+
+    </tbody>
+  </table>
+  
+</body>
+</html>

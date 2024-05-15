@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alexandre">
+
+</head>
+<body>
+
+  <h1>Formulário de Login</h1>
+
+  <form action="#" method="post" class="formLogin">
+
+    <fieldset>
+      <legend>Dados pessoais</legend>
+
+      <label>Email</label> <br>
+      <!-- Ao invés de colocar text, colocamos email para deixar o formulário semântico -->
+      <!-- Ao colocar "required em um campo, eu o torno obrigatório" -->
+      <input type="email" placeholder="ex.: usuario@gmail.com" required> <br>
+
+      <label>Numero de filhos</label> <br>
+      <!-- Da mesma forma colocamos number para relacionar apenas com números -->
+      <!-- Podemos também colocar um valor máximo e mínimo para number -->
+      <input type="number" min="0" max="1000"> <br>
+
+      <label>Data de nascimento</label> <br>
+      <!-- Da mesma forma podemos trabalhar com datas -> min e max -->
+      <!-- Vale observar que a data vem no padrão norte americano yyyy/mm/dd -->
+      <!-- Mas as configurações do browser irão mostrar a data no formato configurado pelo browser -->
+      <input type="date" min="2018-01-30" max="2138-01-30"> 
+
+      <!-- Para estruturar um radio -->
+      <p>Sexo</p>
+      <label>
+        <input type="radio" name="sexo" value="M"> 
+        Masculino
+      </label>
+      
+      <label>
+        <input type="radio" name="sexo" value="F">
+        Feminino
+      </label>
+
+      <!-- O campo name que faz os radios pertencerem ao mesmo grupo -->
+      <!-- O atributo value que define o valor do input type="radio" -->
+      <!-- 
+        Caso eu queria seleciona a opção clicando na palavra  
+        colocamos todo o conteúdo dentro da tag label, o que 
+        faz com que melhore a acessibilidade.
+      -->
+      <br><br>
+
+      <!-- Para estruturar um select -->
+      <label>Estado</label>
+      <select name="estado" id="">
+        <option value="0">Selecione</option>
+        <option value="SP">São Paulo</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="RJ">Rio de Janeiro</option>
+      </select>
+
+    </fieldset>  
+
+    <fieldset>
+      <legend>Áreas de Interesse</legend>
+
+      <label>
+        <input type="checkbox" name="interesse" value="html">
+        HTML
+      </label>
+
+      <label for="">
+        <input type="checkbox" name="interesse" value="css">
+        CSS
+      </label>
+      
+      <label>
+        <input type="checkbox" name="interesse" value="JavaScript">
+        JavaScritp
+      </label>
+
+      <!-- o label no select funciona da mesma forma que no radio -->
+
+    </fieldset>  
+    
+    <fieldset>
+      <legend>Mensagem</legend>
+      <!-- colunas, linhas, número máximo de caracteres, stylo css inline para não redimensionar -->
+      <textarea name="msg" id="" cols="30" rows="10" maxlength=300 style="resize: none;"></textarea>
+
+      <textarea name="msg" id="" cols="30" rows="10" readonly style="resize: none;">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has!
+      </textarea>
+
+      <label for="">
+        <input type="checkbox" checked>
+        Li e aceito os termos.
+
+      </label>
+
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Pesquisa</legend>
+      <label for="">Satisfação</label>
+      <!-- temos o valor mínimo, o máximo e o intervalor de 0,5 -->
+      <input type="range" min="0" max="10" step=".5"> <br> <br>
+      <label for="">Hora da pesquisa</label>
+      <input type="time"> <br> <br>
+      <label for="">Cor preferida</label>
+      <input type="color"> <br> <br>
+      <label for="">Nota final</label>
+      <input type="number" step=".5">
+    </fieldset>
+      
+    <br> <br>
+    <!-- Responsável por enviar as informações do formulário -->
+    <input type="submit">
+    <!-- Botão gerenérico que é atrelado à uma lógica (Javascript) -->
+    <input type="button" value="Button">
+    <!-- Botão responsável por limpar o formulário -->
+    <input type="reset" value="Reset">
+
+    <!--
+      Vale lembrar que dentro de um form poderemos ter vários fieldsets
+      Eles vão delimitar elementos dentro de um determinado contexto.
+    -->
+
+  </form>
+
+</body>
+</html>
+

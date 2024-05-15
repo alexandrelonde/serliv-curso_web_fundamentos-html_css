@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title> Título da página </title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre">
+  <meta name="description" content="Descrição joia">
+  <meta name="keywords" content="html5, tecnologia">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* usando o mesmo estilo em diferentes tags */
+    p, li {
+      font-family: sans-serif;
+    }
+
+    /* usando pseudo-classes */
+    a:link {
+      color: green;
+    }
+
+    a:hover {
+      background-color: #ccc;
+    }
+    a:visited {
+      color: red;
+    }
+
+    /* usando list-style */
+    ul li {
+      list-style-type: disc;
+    }
+
+    ol li {
+      list-style-type: upper-roman;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1> Estrutura básica </h1>
+  <a href="01_teste.html" target="_blank"> Acessar arquivo 01</a> |
+  <a href="02_tags.html" target="_blank"> Acessar arquivo 02</a>
+
+  <ul>
+    <li> Item 1 </li>
+    <li> Item 2 </li>
+    <li> Item 3 </li>
+  </ul>
+
+  <ol>
+    <li> Item 1 </li>
+    <li> Item 2 </li>
+    <li> Item 3 </li>
+  </ol>
+
+  <p> Trabalhando com um parágrafo. </p>
+</body>
+
+</html>
+
+<!-- 
+  Importante: se eu colocar a tag body no css o estilo será
+  passado por heranças às tags internas (p, ul, li, ...)
+  OBS.: com excessão para a tag "a" -> temos trabalha-la 
+  separadamente.
+-->

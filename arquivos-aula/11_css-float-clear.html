@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title> Trabalhando com Display </title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre">
+  <meta name="description" content="Trabalhando com Imagens">
+  <meta name="keywords" content="html5, tecnologia">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+    #container {
+      width: 80%;
+      padding: 15px;
+      background-color: #ccc;
+      overflow: auto; /* gambiarra - só para concertar */
+    }
+
+    #container div {
+      width: 150px;
+      height: 100px;
+      border: 2px solid red;
+      margin: 5px;
+    }
+
+    /*
+
+      #div2 {
+        float: right; -> flutua o elemento para direita 
+      }
+      
+      #div3 {
+        background-color: yellow;
+        clear: right; -> limpa a flutuação para a direita 
+      }
+
+      Se eu quiser limpar o float de ambos os lados
+      usarei -> clear: both;
+
+    */
+      
+    #div2 {
+      float: none;
+    }
+
+    #div3 {
+      float: right;
+    }
+
+    header {
+      background-color: #ccc;
+      height: 50px;
+    }
+
+    nav {
+      width: 25%;
+      height: 50px;
+      background-color: orange;
+      float: left;
+    }
+
+    main {
+      width: 70%;
+      height: 100px;
+      background-color: yellow;
+      float: right;
+    }
+
+    footer {
+      height: 50px;
+      background-color: blue;
+      clear: both;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1> Trabalhando com css float e css clear </h1>
+
+  <div id="container">
+    <div id="div1"> div1 </div>
+
+    <div id="div2"> div2 </div>
+  
+    <div id="div3"> div3 </div>
+  </div>
+
+  <hr>
+
+  <header> header </header>
+  <nav> nav </nav>
+  <main> main </main>
+  <footer> footer </footer>
+
+
+</body>
+</html>

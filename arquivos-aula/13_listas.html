@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title> Utilizando Listas </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alexandre">
+
+  <style>
+    li ul {
+      height: 0;
+      overflow: hidden;
+      transition: height .5s; /* indica a propriedade que sofrerá transição */
+    }
+
+    li:hover {
+      background-color: #ccc;
+    }
+
+    li:hover ul {
+      height: 50px; /* propriedade alterada no hover */
+    }
+
+  </style>
+  
+</head>
+<body>
+
+  <!-- Listas aninhadas -->
+  <ul>
+    <li> item 1 </li>
+    <li> item 2
+      <ul>
+        <li> item 2.1 </li>
+        <li> item 2.2 </li>
+      </ul>
+    </li>
+    <li> item 3 </li>
+  </ul>
+  <hr>
+  
+  <!-- Listas de definição -->
+  <!-- definition list, definiton term e definition description -->
+  <dl>
+    <dt> HTML </dt>
+    <dd> Linguagem de marcação de Hypertexto. </dd>
+
+    <dt> CSS </dt>
+    <dd> Liguagem para criação de folhas de estilos. </dd>
+  </dl>
+  <hr>
+
+  <dl>
+    <dt> wwww </dt>
+    <dt> Internet </dt>
+    <dd> Rede mundial de computadores. </dd>
+
+    <dt> Javascript </dt>
+    <dd> Linguagem script para internet. </dd>
+    <dd> Script para rodar no browser. </dd>
+  </dl>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

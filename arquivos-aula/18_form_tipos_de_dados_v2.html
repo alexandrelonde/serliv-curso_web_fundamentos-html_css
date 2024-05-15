@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Tipos de dados - forms</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <form action="#" method="get">
+    <fieldset>
+      <legend>Dados pessoais</legend>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu email" required> <br> <br>
+      <label for="numeroFilhos">Quantidade de filhos</label> 
+      <input type="number" id="numeroFilhos" name="numeroFilhos" min="0"> <br> <br>
+      <label for="dataNascimento">Data de nascimento</label> 
+      <input type="date" id="dataNascimento" name="dataNascimento"> <br>
+
+      <!------------------------------------------->
+      <p>Sexo: </p>
+      <label>
+        <input type="radio" name="sexo" value="M">
+        Masculino
+      </label>
+      <label>
+        <input type="radio" name="sexo" value="F">
+        Feminino
+      </label>
+      <!------------------------------------------->
+
+      <br><br>
+
+      <!------------------------------------------->
+      <label>Estado</label>
+      <select name="estado" id="">
+        <option value="0">Selecione</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="SP">São Paulo</option>
+      </select>
+      <!------------------------------------------->
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Área de Interesse</legend>
+      <label>
+        <input type="checkbox" name="html" value="html">
+        HTML
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="css" value="css">
+        CSS
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="javascript" value="javascript">
+        JavaScript
+      </label>
+    </fieldset>
+
+    <br>
+    <fieldset>
+      <legend>Mensagem</legend>
+
+      <textarea name="mensagem" id="" cols="30" rows="10" maxlength="10" style="resize: none;"></textarea>
+
+      <textarea name="contrato" id="" cols="30" rows="10" readonly style="resize: none;"> 
+        Texto específico para o contrato. Esse texto não pode ser alterado.
+      </textarea>
+
+      <textarea name="mensagem" id="" cols="30" rows="10" disabled style="resize: none;">
+        Text area com o atributo disabled.
+      </textarea>
+
+      <label>
+        <input type="checkbox" checked>
+        Li e aceito os termos.
+      </label> <br> <br>
+
+      <label for="satisfacao">Grau de satisfação do serviço: </label>
+      <input type="range" id="rangeSatisfacao" name="rangeSatisfacao" min="0" max="10" step="1"> 
+      <span id="valueSatisfacao"> 5 </span>
+      <span id="feedback" hidden> = Excelente!!! </span>
+      <script>
+        const rangeSatisfacao = document.getElementById('rangeSatisfacao');
+        const valueSatisfacao = document.getElementById('valueSatisfacao');
+        const feedback = document.getElementById('feedback');
+
+        rangeSatisfacao.addEventListener('input', function() {
+          valueSatisfacao.textContent = rangeSatisfacao.value;
+
+          // Verificação do feedback
+          if(rangeSatisfacao.value === '10') {
+            feedback.hidden = false;
+          } else {
+            feedback.hidden = true;
+          }
+        });
+      </script> <br> <br>
+
+      <label for="cor">Cor preferida: </label>
+      <input type="color" id="cor" name="cor"> <br><br>
+
+      <label for="hora">Hora da pesquisa: </label> 
+      <input type="time" id="hora" name="hora">
+
+
+
+
+    </fieldset>
+    <br>
+
+    <!-- Tipos de botões do formulário -->
+    <input type="button" id="botaoGenerico" value="Botão Genérico"> <!-- botão gerérico para acrescentar um método -->
+    <script>
+      document.getElementById('botaoGenerico').addEventListener('click', () => {
+        alert('Você clicou no botão!');
+      });
+    </script>
+
+    <input type="reset" value="Limpar"> <!-- botão reset para limpar o formulário -->
+    <input type="submit" value="Cadastrar"> <!-- botão para enviar informações - submit -->
+
+  </form>
+  
+</body>
+</html>
+
+<!--
+  Temos o input type="email" para colocar um e-mail no formulário,
+  o que torna o formulário mais semântico. Embora visualmente um 
+  type="text" e type="email" sejam iguais.
+
+  Para que os campos sejam de preenchimento obrigatório, colocamos
+  o atributo required, e então o campo será validado pelo browser
+  de acordo com o seu contexto.
+
+  Tanto o campo number ou date aceita os parâmetros min e max
+
+  Ao colocar o atributo readonly no elemento textarea bloqueamos
+  o conteúdo de ser alterado.
+
+  Se quisermos permitir uma quantidade específica de caracteres,
+  utlizamos o atributo maxlength.
+
+  Para o checkbox, se colocamos o atributo checked, o checkbox 
+  já vem marcado por padrão.
+-->
