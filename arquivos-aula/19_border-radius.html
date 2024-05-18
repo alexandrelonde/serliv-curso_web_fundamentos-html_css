@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <title>Border Radius</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <h1>CSS efeitos</h1>
-  
-</body>
+  <head>
+    <title>Border Radius</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      #radius {
+        background-color: orange;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        border-radius: 100px;
+      }
+
+      #radius2 {
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        /* Podemos colocar bordas arredondadas com medidas diferentes */
+        /* Começando do canto superior esquerdo */
+        border-radius: 20px 50px 30px 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS efeitos</h1>
+    <div id="radius"></div>
+    <div id="radius2"></div>
+  </body>
 </html>
+
+<!-- 
+  com border-raius conseguimos colocar cantos arredondados;
+  border-radius: 25px;
+  25px é a distancia do raio do canto arredondado, seria o 
+  raio que a esfera dos cantos possui.
+
+  Visto isso, podemos usar essa propriedade para fazer uma esfera
+  se o lado no nosso elemento tem 200px, um raio seria de 100px
+  colocando essa media no nosso border-radius, conseguimos 
+  fazer uma esfera.
+  Nesse caso, podemos usar o border-radius em por centagem:
+  border-radius: 50%
+-->
