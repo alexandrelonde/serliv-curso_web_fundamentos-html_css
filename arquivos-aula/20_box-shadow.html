@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Box Shadow</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      #radius {
+        background-color: orange;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        border-radius: 100px;
+
+        /* box-shadow: 10px 10px 10px black; */
+        /* box-shadow: eixo x, eixo y, esfumaçamento, cor */
+
+        /* Podemos aumentar o diminuir o tamanho da sombra */
+        /* box-shadow: 10px 10px 10px 20px black; */
+        /* box-shadow: eixo x, eixo y, esfumaçamento, tamanho, cor */
+
+        /* Podemos colocar mais de uma sombra no elemento */
+        box-shadow: 10px 10px 10px 20px black, -10px -10px 20px red;
+      }
+
+      #radius2 {
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        /* Podemos colocar bordas arredondadas com medidas diferentes */
+        /* Começando do canto superior esquerdo */
+        /* border-radius: 20px 50px 30px 100px; */
+        border-radius: 100% / 70%; /* eixo x, eixo y*/
+        
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS efeitos</h1>
+    <div id="radius"></div>
+    <div id="radius2"></div>
+  </body>
+</html>
+
+
