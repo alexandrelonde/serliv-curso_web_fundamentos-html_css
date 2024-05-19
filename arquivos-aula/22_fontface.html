@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Fontes Customizadas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+    /* diretiva da fonte personalizada */
+    /* colocamos o nome da família da fonte e onde ela se encontra */
+    /* então colocamos no font-family do elemento em questão */
+    @font-face {
+      font-family: 'nadia';
+      src: url(fonts/nadia/nadia-serif.eot);
+      src: url(fonts/nadia/nadia-serif.woff) format('woff'), 
+           url(fonts/nadia/nadia-serif.ttf) format('truetype'), 
+           url(fonts/nadia/nadia-serif.svg) format('svg');
+    }
+
+    h1 {
+      font-family: nadia, sans-serif;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Fontes Customizadas</h1>
+  
+</body>
+</html>
+
+<!-- 
+  IMPORTANTE!
+  Como colocamos uma fonte personalizada, temos que disponibilizar 
+  o arquivo para dowlad para que a mesma seja renderizada no browser
+  do usuário, até mesmo por que o arquivo da fonte está localizado
+  localmente dentro da pasta do projeto. 
+  CUIDADO COM FONTES QUE POSSUEM DIREITOS AUTORAIS.
+
+  Cada browser suporta um formato de fonte, por isso baixamos um
+  pacote de fontes e colocamos vários formatos no scr da fonte 
+  customizada:
+
+    @font-face {
+      font-family: 'nadia';
+      src: url(fonts/nadia/nadia-serif.eot);
+      src: url(fonts/nadia/nadia-serif.woff), 
+           url(fonts/nadia/nadia-serif.ttf), 
+           url(fonts/nadia/nadia-serif.svg);
+    }
+
+  Para que o browser não faça download de todos os formatos, e sim
+  do que funcionará na página, colocamos o tipo de arquivo da fonte:
+
+    @font-face {
+      font-family: 'nadia';
+      src: url(fonts/nadia/nadia-serif.eot);
+      src: url(fonts/nadia/nadia-serif.woff) format('woff'), 
+           url(fonts/nadia/nadia-serif.ttf) format('truetype'), 
+           url(fonts/nadia/nadia-serif.svg) format('svg');
+    }
+
+-->
